@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Prateek Roy</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="animate.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="backgrounds" id="app">
+        <ul id="small-nav" class="sidenav hide-on-large-only sidenav-fixed mynav" style="width: 90px">
+            <!--same navbar part-->
+            <li style="height: 357px">
+
+            </li>
+
+            <li class="semi-border-s">
+            </li>
+            <li class="semi-border-s">
+                <ul class="section table-of-contents">
+                    <li><a n="1" class="waves-effect nav-elem" href="#home">
+                            <i class="fa fa-home" style="color:#142840;font-size:40px;"></i></a></li>
+                    <li><a n="2" class="waves-effect nav-elem" href="#about">
+                            <i class="fa fa-user" style="color:#142840;font-size:40px;"></i></a></li>
+                    <li><a n="3" class="waves-effect nav-elem" href="#projects">
+                            <i class="fa fa-pie-chart" style="color:#142840;font-size:40px;"></i></a>
+                    </li>
+                    <li><a n="4" class="waves-effect nav-elem" href="#skills">
+                            <i class="fa fa-bar-chart" style="color:#142840;font-size:40px;"></i></a>
+                    </li>
+                    <li><a n="5" class="waves-effect nav-elem" href="#contact">
+                            <i class="fa fa-envelope" style="color:#142840;font-size:40px;"></i></a>
+                    </li>
+                </ul>
+            </li>
+            <li style="margin-top: 10px">
+                <a n="6" class="nav-elem" v-bind:href="resume">
+                    <i class="fa fa-file-text" style="color:#142840;font-size:40px;"></i>
+                </a>
+            </li>
+            <li>
+                <a n="7" class="nav-elem" v-bind:href="mail_to">
+                    <i class="fa fa-paper-plane" style="color:#142840;font-size:40px;"></i>
+                </a>
+            </li>
+            <li>
+                <a n="8" class="nav-elem" v-bind:href="linkedin">
+                    <i class="fa fa-linkedin-square" style="color:#142840;font-size:40px;"></i>
+                </a>
+            </li>
+            <li>
+                <a n="9" class="nav-elem" v-bind:href="github">
+                    <i class="fa fa-github" style="color:#142840;font-size:40px;"></i>
+                </a>
+            </li>
+            <li>
+                <a n="10" class="nav-elem" v-bind:href="twitter">
+                    <i class="fa fa-twitter" style="color:#142840;font-size:40px;"></i>
+                </a>
+            </li>
+        </ul>
+
+        <!--Left Navbar Large-->
+        <ul id="large-nav" class="sidenav hide-on-small-only sidenav-fixed mynav">
+            <!--same navbar part-->
+            <li style="height: 285px">
+                <img src="files/profile.png" style="max-width: 285px">
+            </li>
+
+
+            <li class="semi-border">
+                <h5 align="center" style="margin-bottom: 0px;margin-top: 5px">{{name}}</h5>
+                <p align="center" style="margin: 0px; height: 40px">{{title}}</p>
+            </li>
+            <li class="semi-border">
+                <ul class="section table-of-contents">
+                    <li><a n="1" class="waves-effect animated slideInRight nav-elem" href="#home">
+                            <i class="fa fa-home" style="color:#142840;font-size:40px;"></i>Home</a></li>
+                    <li><a n="2" class="waves-effect animated slideInRight nav-elem" href="#about">
+                            <i class="fa fa-user" style="color:#142840;font-size:40px;"></i>About</a></li>
+                    <li><a n="3" class="waves-effect animated slideInRight nav-elem" href="#projects">
+                            <i class="fa fa-pie-chart" style="color:#142840;font-size:40px;"></i>Projects</a></li>
+                    <li><a n="4" class="waves-effect animated slideInRight nav-elem" href="#skills">
+                            <i class="fa fa-bar-chart" style="color:#142840;font-size:40px;"></i>Skills</a></li>
+                    <li><a n="5" class="waves-effect animated slideInRight nav-elem" href="#contact">
+                            <i class="fa fa-envelope" style="color:#142840;font-size:40px;"></i>Contact</a></li>
+                </ul>
+            </li>
+            <li style="margin-top: 10px">
+                <a n="6" class="animated slideInRight nav-elem" v-bind:href="resume">
+                    <i class="fa fa-file-text" style="color:#142840;font-size:40px;"></i> Resume
+                </a>
+            </li>
+            <li>
+                <a n="7" class="animated slideInRight nav-elem" v-bind:href="mail_to">
+                    <i class="fa fa-paper-plane" style="color:#142840;font-size:40px;"></i> E-mail
+                </a>
+            </li>
+            <li>
+                <a n="8" class="animated slideInRight nav-elem" v-bind:href="linkedin">
+                    <i class="fa fa-linkedin-square" style="color:#142840;font-size:40px;"></i> LinkedIn
+                </a>
+            </li>
+            <li>
+                <a n="9" class="animated slideInRight nav-elem" v-bind:href="github">
+                    <i class="fa fa-github" style="color:#142840;font-size:40px;"></i> Github
+                </a>
+            </li>
+            <li>
+                <a n="10" class="animated slideInRight nav-elem" v-bind:href="twitter">
+                    <i class="fa fa-twitter" style="color:#142840;font-size:40px;"></i> Twitter
+                </a>
+            </li>
+        </ul>
+
+
+        <div id="right">
+            <!--Home-->
+            <section id="home" class="section scrollspy" style="min-height: 100vh;">
+
+                <div align="center" class="container" style="padding-top: 6vh;">
+                    <div style="min-height:80vh">
+                        <img id="homeimg" src="files/home.png" style="width:280px;display:inline-block">
+                        <div style="width: 510px; display:inline-block">
+                            <blockquote id="quote" class="animated fadeIn" style="padding-left: 5px;margin-left: 10px">
+                                <h2>Hello! I'm Prateek</h2>
+                                <h4>and I'm a Full stack developer</h4>
+                            </blockquote>
+                            <br>
+                            <div id="homebutton" class="animated zoomIn" align="center">
+                                <a href="#about" class="waves-effect waves-light btn-large"
+                                    style="background-color:#D94A3D"><i
+                                        class="material-icons right">arrow_downward</i>View
+                                    Portfolio</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!--About-->
+            <section id="about" class="section scrollspy" style="min-height: 50vh;padding: 0px">
+                <h3 class="page title sec-head" style="display: inline-block;width:100%;padding: 20px;margin:0px">
+                    <div class="slideanim"><i class="fa fa-user" style="font-size:50px;padding-right: 30px"></i>About
+                    </div>
+                </h3>
+                <div class="flow-text container row" style="width:100%;">
+                    <div class="col s6" style="padding: 30px">
+                        <ul class="aboutanim" a="1" anim="zoomIn"
+                            style="border: 4px solid #142840;border-radius: 10px;padding: 15px">
+                            <h4 align="center" style="color:#142840; margin-bottom: 30px"><b>Bio</b></h4>
+                            <li style="margin: 20px"><b style="color:#142840 ">Address: </b>{{address}}</li>
+                            <li style="margin: 20px"><b style="color:#142840 ">Qualification: </b>{{qual}}</li>
+                            <li style="margin: 20px"><b style="color:#142840 ">Date of Birth: </b>{{dob}}</li>
+                            <li style="margin: 20px"><b style="color:#142840 ">Status: </b>{{status}}</li>
+                            <li style="margin: 20px"><b style="color:#142840 ">Hobby: </b>Art / Video Games</li>
+                            <li style="margin: 20px"><b style="color:#142840 ">Blood Group: </b>Coffee</li>
+                        </ul>
+                        <div class="aboutanim" a="4" anim="zoomIn" style="display: inline-block">
+                            <a v-bind:href="resume" class="waves-effect waves-light btn-large tooltipped" data-position="left" data-tooltip="View resume"
+                                style="background-color:#39588A">
+                                <i class="material-icons left">insert_drive_file</i>Resume
+                            </a>
+                            <a v-bind:href="resume" class="waves-effect waves-light btn-large tooltipped"
+                                style="background-color:#39588A" data-position="right" data-tooltip="Download resume" download>
+                                <i class="material-icons">file_download</i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col s6" style="padding-top: 90px">
+                        <blockquote class="aboutanim" a="2" anim="zoomIn">
+                            <h4>
+                                Passion driven <b>web developer</b> with a keen interest in <b>UI/UX design.</b>
+                            </h4>
+                        </blockquote><br>
+                        <div class="aboutanim" a="3" anim="fadeIn" style="border-top:4px solid #D94A3D">
+                            <br>
+                            I'm an engineering graduate based on Delhi, India.<br>
+                            I've learnt web development over the past year and currently looking for an opportunity to
+                            help
+                            others and solve problems. I like to keep and open mind and always willing to learn
+                            more.<br>
+                            To know more about me, find my attached resume.
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!--Projects-->
+            <section id="projects" class="section scrollspy" style="min-height: 100vh;padding: 0px">
+                <h3 class="page title sec-head" style="display: inline-block;width:100%;padding: 20px;margin:0px">
+                    <div class="slideanim"><i class="fa fa-pie-chart"
+                            style="font-size:50px;padding-right: 30px"></i>Projects</div>
+                </h3>
+                <div class="row" style="width:100%;padding:10px">
+                    <div class="col l6">
+                        <!--Project1 Konnect-->
+                        <div class="card projectsanim" a="1" anim="zoomIn" style="display:inline-block;margin:10px">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="files/homepage.png">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Chat App<i
+                                        class="material-icons right">more_vert</i></span>
+                                <p>Konnect is messaging application.</p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Chat App<i
+                                        class="material-icons right">close</i></span>
+                                <p>
+                                    <h5>Languages:</h5>
+                                    <img src="files/html5.png" alt=""
+                                        style="display: inline-block;padding: 5px; height: 80px">
+                                    <img src="files/css3.png" alt=""
+                                        style="display: inline-block;padding: 5px; height: 80px">
+                                    <img src="files/javascript.png" alt=""
+                                        style="display: inline-block;padding: 5px; height: 80px">
+
+                                    <h5>Dependencies:</h5>
+                                    <img src="files/bootstrap.png" alt=""
+                                        style="display: inline-block;padding: 5px; height: 80px">
+                                    <img src="files/jquery.png" alt=""
+                                        style="display: inline-block;padding: 5px; height: 80px">
+                                    <img src="files/express.jpg" alt=""
+                                        style="display: inline-block;padding: 5px; height: 80px">
+                                    <img src="files/socketio.png" alt=""
+                                        style="display: inline-block;padding: 5px; height: 80px">
+
+
+                                </p>
+                                <div class="card-action" style="position:absolute;bottom: 0px;right:20px">
+                                    <a v-bind:href="konnect_path" data-position="top" data-tooltip="View Online"
+                                        class="btn-floating btn-large waves-effect waves-light brown tooltipped">
+                                        <i class="fa fa-external-link" style="background-color: #01403A"></i>
+                                    </a>
+                                    <a v-bind:href="konnect_git" data-position="top" data-tooltip="View Source"
+                                        class="btn-floating btn-large waves-effect waves-light brown tooltipped"
+                                        style="margin-left: 20px; ">
+                                        <i class="fa fa-github" style="background-color: #01403A"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Project3 Path Finding-->
+                        <div class="card projectsanim" a="3" anim="zoomIn" style="display:inline-block;margin:10px">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="files/path.png">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Path Finder<i
+                                        class="material-icons right">more_vert</i></span>
+                                <p>Finds the shortest path between two points in a grid with obstacles</p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Path Finder<i
+                                        class="material-icons right">close</i></span>
+                                <p>
+                                    <h5>Languages:</h5>
+                                    <img src="files/html5.png" alt=""
+                                        style="display: inline-block;padding: 5px; height: 80px">
+                                    <img src="files/css3.png" alt=""
+                                        style="display: inline-block;padding: 5px; height: 80px">
+                                    <img src="files/javascript.png" alt=""
+                                        style="display: inline-block;padding: 5px; height: 80px">
+
+                                    <h5>Dependencies:</h5>
+                                    <img src="files/bootstrap.png" alt=""
+                                        style="display: inline-block;padding: 5px; height: 80px">
+                                    <img src="files/jquery.png" alt=""
+                                        style="display: inline-block;padding: 5px; height: 80px">
+
+
+                                </p>
+                                <div class="card-action" style="position:absolute;bottom: 0px;right:20px">
+                                    <a v-bind:href="pf_path" data-position="top" data-tooltip="View Online"
+                                        class="btn-floating btn-large waves-effect waves-light brown tooltipped">
+                                        <i class="fa fa-external-link" style="background-color: #01403A"></i>
+                                    </a>
+                                    <a v-bind:href="pf_git" data-position="top" data-tooltip="View Source"
+                                        class="btn-floating btn-large waves-effect waves-light brown tooltipped"
+                                        style="margin-left: 20px; ">
+                                        <i class="fa fa-github" style="background-color: #01403A"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l6">
+                        <!--Project2 TDL-->
+                        <div class="card projectsanim" a="2" anim="zoomIn" style="display:inline-block;margin:10px">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="files/tdl.png">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">To Do List App<i
+                                        class="material-icons right">more_vert</i></span>
+                                <p>Manage your tasks using this app.</p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">To Do List App<i
+                                        class="material-icons right">close</i></span>
+                                <p>
+                                    <h5>Languages:</h5>
+                                    <img src="files/html5.png" alt=""
+                                        style="display: inline-block;padding: 5px; height: 80px">
+                                    <img src="files/css3.png" alt=""
+                                        style="display: inline-block;padding: 5px; height: 80px">
+                                    <img src="files/Typescript2.png" alt=""
+                                        style="display: inline-block;padding: 5px; height: 80px">
+
+                                    <h5>Dependencies:</h5>
+                                    <img src="files/bootstrap.png" alt=""
+                                        style="display: inline-block;padding: 5px; height: 80px">
+                                    <img src="files/jquery.png" alt=""
+                                        style="display: inline-block;padding: 5px; height: 80px">
+                                    <img src="files/fa-featured.jpg" alt=""
+                                        style="display: inline-block;padding: 5px; height: 80px">
+
+
+                                </p>
+                                <div class="card-action" style="position:absolute;bottom: 0px;right:20px">
+                                    <a v-bind:href="tdl_path" data-position="top" data-tooltip="View Online"
+                                        class="btn-floating btn-large waves-effect waves-light brown tooltipped">
+                                        <i class="fa fa-external-link" style="background-color: #01403A"></i>
+                                    </a>
+                                    <a v-bind:href="tdl_git" data-position="top" data-tooltip="View Source"
+                                        class="btn-floating btn-large waves-effect waves-light brown tooltipped"
+                                        style="margin-left: 20px; ">
+                                        <i class="fa fa-github" style="background-color: #01403A"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Project4 Registration-->
+                        <div class="card projectsanim" a="4" anim="zoomIn" style="display:inline-block;margin:10px">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="files/regis.png">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Registration Template<i
+                                        class="material-icons right">more_vert</i></span>
+                                <p>A generic registration template.</p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Registration Template<i
+                                        class="material-icons right">close</i></span>
+                                <p>
+                                    <h5>Languages:</h5>
+                                    <img src="files/html5.png" alt=""
+                                        style="display: inline-block;padding: 5px; height: 80px">
+                                    <img src="files/css3.png" alt=""
+                                        style="display: inline-block;padding: 5px; height: 80px">
+                                    <img src="files/javascript.png" alt=""
+                                        style="display: inline-block;padding: 5px; height: 80px">
+
+                                    <h5>Dependencies:</h5>
+                                    <img src="files/materialize.png" alt=""
+                                        style="display: inline-block;padding: 5px; height: 80px">
+                                    <img src="files/jquery.png" alt=""
+                                        style="display: inline-block;padding: 5px; height: 80px">
+                                    <img src="files/sequelize.png" alt=""
+                                        style="display: inline-block;padding: 5px; height: 80px">
+                                    <img src="files/sqlite.png" alt=""
+                                        style="display: inline-block;padding: 5px; height: 80px">
+                                    <img src="files/passportJS.png" alt=""
+                                        style="display: inline-block;padding: 5px; height: 80px">
+                                    <img src="files/handlebars-js.png" alt=""
+                                        style="display: inline-block;padding: 5px; height: 80px">
+
+
+
+                                </p>
+                                <div class="card-action" style="position:absolute;bottom: 0px;right:20px">
+                                    <a v-bind:href="regis_path" data-position="top" data-tooltip="View Online"
+                                        class="btn-floating btn-large waves-effect waves-light brown tooltipped">
+                                        <i class="fa fa-external-link" style="background-color: #01403A"></i>
+                                    </a>
+                                    <a v-bind:href="regis_git" data-position="top" data-tooltip="View Source"
+                                        class="btn-floating btn-large waves-effect waves-light brown tooltipped"
+                                        style="margin-left: 20px; ">
+                                        <i class="fa fa-github" style="background-color: #01403A"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!--Skills-->
+            <section id="skills" class="section scrollspy" style="min-height: 80vh;padding: 0px">
+                <h3 class="page title sec-head" style="display: inline-block;width:100%;padding: 20px;margin:0px">
+                    <div class="slideanim"><i class="fa fa-bar-chart"
+                            style="font-size:50px;padding-right: 30px"></i>Skills</div>
+                </h3>
+                <div align="center" class="row" style="width:100%;padding: 20px">
+                    <div class="col s4">
+                        <h3 class="skillsanim" a="1" anim="zoomIn">Front-end</h3>
+                        <h5 class="skillsanim" a="2" anim="fadeIn">Languages</h5><br>
+                        <div class="skillsanim" a="r" anim="bounceIn" style="display: inline-block; margin: 10px"><img
+                                alt="" src="files/html5.png" style="height:60px; width: auto"><br>HTML5</div>
+                        <div class="skillsanim" a="r" anim="bounceIn" style="display: inline-block; margin: 10px"><img
+                                alt="" src="files/css3.png" style="height:60px; width: auto"><br>CSS3</div>
+                        <div class="skillsanim" a="r" anim="bounceIn" style="display: inline-block; margin: 10px"><img
+                                alt="" src="files/javascript.png" style="height:60px; width: auto"><br>JavaScript</div>
+                        <div class="skillsanim" a="r" anim="bounceIn" style="display: inline-block; margin: 10px"><img
+                                alt="" src="files/Typescript2.png" style="height:60px; width: auto"><br>TypeScript</div>
+                        <h5 class="skillsanim" a="2" anim="fadeIn" style="margin-top: 50px">Libraries/Frameworks</h5>
+                        <br>
+                        <div class="skillsanim" a="r" anim="bounceIn" style="display: inline-block; margin: 10px"><img
+                                alt="" src="files/bootstrap.png" style="height:60px; width: auto"><br>bootstrap</div>
+                        <div class="skillsanim" a="r" anim="bounceIn" style="display: inline-block; margin: 10px"><img
+                                alt="" src="files/materialize.png" style="height:60px; width: auto"><br>Materialize
+                        </div>
+                        <div class="skillsanim" a="r" anim="bounceIn" style="display: inline-block; margin: 10px"><img
+                                alt="" src="files/jquery.png" style="height:60px; width: auto"><br>jQuery</div>
+
+                        <div class="skillsanim" a="r" anim="bounceIn" style="display: inline-block; margin: 10px"><img
+                                alt="" src="files/vue.png" style="height:60px; width: auto"><br>Vue</div>
+                        <div class="skillsanim" a="r" anim="bounceIn" style="display: inline-block; margin: 10px"><img
+                                alt="" src="files/angular.png" style="height:60px; width: auto"><br>Angular</div>
+                    </div>
+
+
+                    <div class="col s4"
+                        style="border-right: 2px solid #142840; min-height: 70vh;border-left: 2px solid #142840;">
+                        <h3 class="skillsanim" a="1" anim="zoomIn">Back-end</h3>
+                        <h5 class="skillsanim" a="2" anim="fadeIn">Libraries/Frameworks</h5><br>
+                        <div class="skillsanim" a="r" anim="bounceIn" style="display: inline-block; margin: 10px"><img
+                                alt="" src="files/express.png" style="height:60px; width: auto"><br>ExpressJS</div>
+                        <div class="skillsanim" a="r" anim="bounceIn" style="display: inline-block; margin: 10px"><img
+                                alt="" src="files/socketio.png" style="height:60px; width: auto"><br>SocketIO</div>
+                        <div class="skillsanim" a="r" anim="bounceIn" style="display: inline-block; margin: 10px"><img
+                                alt="" src="files/sequelize.png" style="height:60px; width: auto"><br>Sequelize</div>
+                        <h5 class="skillsanim" a="2" anim="fadeIn" style="margin-top: 50px">Database</h5>
+                        <div class="skillsanim" a="r" anim="bounceIn" style="display: inline-block; margin: 10px"><img
+                                alt="" src="files/sql.png" style="height:60px; width: auto"><br>SQL</div>
+                        <div class="skillsanim" a="r" anim="bounceIn" style="display: inline-block; margin: 10px"><img
+                                alt="" src="files/sqlite.png" style="height:60px; width: auto"><br>SQLite</div>
+                    </div>
+                    <div class="col s4">
+                        <h3 class="skillsanim" a="1" anim="zoomIn">Others</h3>
+                        <div class="skillsanim" a="r" anim="bounceIn" style="display: inline-block; margin: 10px"><img
+                                alt="" src="files/python.png" style="height:60px; width: auto"><br>Python</div>
+                        <div class="skillsanim" a="r" anim="bounceIn" style="display: inline-block; margin: 10px"><img
+                                alt="" src="files/cpp.png" style="height:60px; width: auto"><br>C++</div>
+                        <div class="skillsanim" a="r" anim="bounceIn" style="display: inline-block; margin: 10px"><img
+                                alt="" src="files/matlab.png" style="height:60px; width: auto"><br>MATLAB</div><br>
+                        <div class="skillsanim" a="r" anim="bounceIn" style="display: inline-block; margin: 10px"><img
+                                alt="" src="files/ps.png" style="height:60px; width: auto"><br>Photoshop</div>
+                        <div class="skillsanim" a="r" anim="bounceIn" style="display: inline-block; margin: 10px"><img
+                                alt="" src="files/an.png" style="height:60px; width: auto"><br>Animate</div><br>
+                        <div class="skillsanim" a="r" anim="bounceIn" style="display: inline-block; margin: 10px"><img
+                                alt="" src="files/github.png" style="height:60px; width: auto"><br>GitHub</div>
+                        <div class="skillsanim" a="r" anim="bounceIn" style="display: inline-block; margin: 10px"><img
+                                alt="" src="files/heroku.png" style="height:60px; width: auto"><br>Heroku</div>
+                        <h5 class="skillsanim" a="2" anim="fadeIn" style="margin-top: 50px">Currently Learning</h5>
+                        <div class="skillsanim" a="r" anim="bounceIn" style="display: inline-block; margin: 10px"><img
+                                alt="" src="files/django.png" style="height:60px; width: auto"><br>Django</div>
+                        <div class="skillsanim" a="r" anim="bounceIn" style="display: inline-block; margin: 10px"><img
+                                alt="" src="files/react.jpg" style="height:60px; width: auto"><br>React</div>
+                        <div class="skillsanim" a="r" anim="bounceIn" style="display: inline-block; margin: 10px"><img
+                                alt="" src="files/mongodb.png" style="height:60px; width: auto"><br>MongoDB</div>
+                    </div>
+                </div>
+            </section>
+
+            <!--Contact-->
+            <section id="contact" class="section scrollspy" style="min-height: 100vh;padding: 0px">
+                <h3 class="page title sec-head" style="display: inline-block;width:100%;padding: 20px;margin:0px">
+                    <div class="slideanim"><i class="fa fa-envelope"
+                            style="font-size:50px;padding-right: 30px"></i>Contact</div>
+                </h3>
+                <div class="container" style="width:100%;padding: 10px">
+                    <h4 align="center" class="contactanim" a="1" anim="zoomIn" style="margin-bottom: 10px"><b
+                            style="color: #142840">Reach out to me</b></h4>
+
+                    <form class="row contactanim" a="2" anim="zoomIn"
+                        action="https://formspree.io/royprateek96@gmail.com" method="POST"
+                        style="padding: 40px;border: 2px solid #142840;border-radius: 15px">
+
+                        <div class="col s7">
+                            <span>To:</span>
+                            <input disabled value="royprateek96@gmail.com" id="disabled" type="text" class="validate">
+                        </div>
+
+                        <div class="col s7">
+                            <span>Name:</span>
+                            <input placeholder="Name" id="name" name="name" type="text" class="validate" />
+                        </div>
+
+                        <div class="col s7">
+                            <span>E-mail:</span>
+                            <input placeholder="Enter your email" id="email" name="_replyto" type="email"
+                                class="validate" />
+                        </div>
+                        <div class="col s12">
+                            <span>Message:</span>
+                            <textarea placeholder="Type your message" name="comments" id="msg" type="text"
+                                class="validate" style="margin-top: 15px;height: 150px"></textarea>
+                            <button id="send" class="btn waves-effect waves-light" type="submit" name="action"
+                                style="background-color: #142840; margin-top: 10px; font-family: Comic Sans MS">Send
+                                <i class="material-icons right">send</i>
+                            </button>
+                        </div>
+                    </form>
+
+                    <div align="center">
+                        <h4 class="contactanim" a="3" anim="slideInRight"
+                            style="border-top: 4px solid #142840;margin-top: 30px;width:80%">
+                        </h4>
+                        <h4 class="contactanim" a="4" anim="zoomIn">
+                            <b style="color: #142840">Find me</b>
+                        </h4>
+                        <a class="contactanim" a="5" anim="zoomIn" v-bind:href="mail_to" style="display: inline-block">
+                            <i class="fa fa-paper-plane tooltipped" data-position="top"
+                                data-tooltip="E-mail Prateek: royprateek96@gmail.com"
+                                style="padding: 20px;color:#142840;font-size:60px;"></i>
+                        </a>
+                        <a class="contactanim" a="6" anim="zoomIn" v-bind:href="linkedin" style="display: inline-block">
+                            <i class="fa fa-linkedin-square tooltipped" data-position="top" data-tooltip="LinkedIN"
+                                style="padding: 20px;color:#142840;font-size:60px;"></i>
+                        </a>
+                        <a class="contactanim" a="7" anim="zoomIn" v-bind:href="github" style="display: inline-block">
+                            <i class="fa fa-github tooltipped" data-position="top" data-tooltip="GitHub"
+                                style="padding: 20px;color:#142840;font-size:60px;"></i>
+                        </a>
+                        <a class="contactanim" a="8" anim="zoomIn" v-bind:href="twitter" style="display: inline-block">
+                            <i class="fa fa-twitter tooltipped" data-position="top" data-tooltip="Twitter"
+                                style="padding: 20px;color:#142840;font-size:60px;"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <section id="scripts">
+        <!--Vue-->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+
+        <!--jQuery-->
+        <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <!--Essentials-->
+        <script src="./script.js"> </script>
+        <script src="./vue.js"></script>
+
+    </section>
+</body>
+
+</html>
