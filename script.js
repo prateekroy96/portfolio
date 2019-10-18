@@ -21,7 +21,7 @@ $(function () {
 
     var pos = $(window).scrollTop();
     var wh = $(window).height();
-    console.log(wh)
+    //console.log(wh)
 
     $('.slideanim').each(function () {
       let t = $(this).offset().top;
@@ -30,7 +30,7 @@ $(function () {
           $(this).css('visibility', 'visible');
           $(this).addClass('animated slideInRight');
 
-          console.log('class added')
+          //console.log('class added')
         }
       }
     })
@@ -61,7 +61,7 @@ $(function () {
           }
         }
         else {
-          console.log('else')
+          //console.log('else')
           let a = parseInt($(this).attr('a'));
           let anim = $(this).attr('anim');
           if (!$(this).hasClass('animated')) {
